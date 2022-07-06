@@ -1,0 +1,108 @@
+.box{
+  margin-left:250px;
+max-width: 700px;
+padding: 25px 30px 30px;
+margin: 0 auto;
+border-radius: 15px; 
+border: 2px solid rgb(235, 232, 232);
+}
+#btnClose{
+  background-color: rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+  color: rgb(219, 24, 17);
+  height: 30px;  
+}
+H1{
+  margin-bottom: 30PX;
+}
+
+.w100_cen{
+  text-align: center;
+}
+.check_b{
+  margin: 0px 5px 0px 15px;
+   width:3vw;
+    height:3vh;
+    vertical-align: top;
+}
+
+.Head
+{
+    width: 100%;
+    text-align: center;
+}
+.textttt,#p_owner
+{
+    width: 100%;
+    display: block;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.col-md-8,.col-md-11{
+  margin: 0px 0px 0px 11%;
+  color:red;
+}
+
+@media (min-width:316px){
+  .box{
+    padding: 18px 30px 30px;
+   
+  }
+  
+}
+@media (min-width:768px)
+{
+    .form-group , .w100
+    {
+        width: 100%;
+        display: flex;
+    }
+    .Bestt
+    {
+      width: 30%;
+      padding-top: 5px;
+      margin-bottom: 0px;
+    }
+    .w100
+    {
+       margin-bottom: 16px;
+    }
+    #t_detail
+    {
+      width: 13%;
+    }
+
+
+}
+
+
+@media screen and (max-width: 1100px){
+  .box{
+    margin-left:10px;
+   
+    padding: 0px 0px 0px;
+    margin: 0px 0px;
+    border-radius: 0px; 
+    border: 0px;
+    margin-top: 0px;
+  }
+  h4{
+    display: none
+  }
+  .check_b{
+    
+     width:5vw;
+      height:5vh;
+     
+  }
+}

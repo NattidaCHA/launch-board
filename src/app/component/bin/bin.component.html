@@ -1,0 +1,229 @@
+<head><meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<div>
+  <h1>Recycle Bin</h1>
+</div>
+<div class="mat-elevation-z8">
+    <div class="row" style="margin:0px">
+        <div class="col-md-12">
+  <div class="searchh">
+    <input  class="form-control" type="text" name="search" [(ngModel)]="searchKey" placeholder="Start searching"
+      autocomplete="off" (keyup)="applyFilter()">
+  </div>
+</div>
+</div>
+  <div id="btnCollects" class="col-md-6 col-sm-12">
+    <div class="row" style="margin: 0px 0px">
+      <button id="project" class="btn" (click)="getbinProject()">Projects</button>
+      <button id="user" class="btn" (click)="getbinUser()">Users</button>
+      <button id="department" class="btn" (click)="getbinDepartment()">Departments</button>
+    </div>
+  </div>
+
+  <table *ngIf="project" mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+   
+    <ng-container matColumnDef="checkbox" >
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let row" id="check">
+        <mat-checkbox class="chex2 chex"  (change)="onChange(row._id, 'project_list', $event.checked)"></mat-checkbox>
+      </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="id">
+      <th mat-header-cell class="cancel" *matHeaderCellDef mat-sort-header>
+        <p>No</p>
+      </th>
+      <td mat-cell class="cancel" *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="project">
+      <th mat-header-cell class="space4" *matHeaderCellDef mat-sort-header>
+        <p>Project</p>
+      </th>
+      <td mat-cell class="space3 dott" *matCellDef="let row">{{row.project}}</td>
+    </ng-container>
+   
+    <ng-container matColumnDef="product_owner">
+      <th mat-header-cell class="space-10 cancel" *matHeaderCellDef mat-sort-header>
+        <p>Product owner</p>
+      </th>
+      <td mat-cell class="space-10 cancel" *matCellDef="let row">{{row.product_owner}}</td>
+    </ng-container>
+    <ng-container matColumnDef="launch_date">
+      <th mat-header-cell class="ld2 ldd" *matHeaderCellDef mat-sort-header>
+        <p>Launch Date</p>
+      </th>
+      <td mat-cell class="space-10 ldd" *matCellDef="let row">{{row.launch_date | date: "d.MMM.yyyy HH.mm"}}</td>
+    </ng-container>
+    <ng-container matColumnDef="detail">
+      <th mat-header-cell class="space-10 cancel" *matHeaderCellDef mat-sort-header>
+        <p>Detail</p>
+      </th>
+      <td mat-cell class="space4 cancel" *matCellDef="let row">{{row.detail}}</td>
+    </ng-container>
+    <ng-container matColumnDef="_id">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let row"></td>
+    </ng-container>
+    <ng-container matColumnDef="tools">
+      <th mat-header-cell id="box" class="bbox" *matHeaderCellDef>
+        <p>Tools</p>
+      </th>
+      <td mat-cell id="box2 " class="bbox"  *matCellDef="let row">
+        <button type="button" id="btnEdit" (click)="restorefrombin(row._id,row.project,'Project_list')">
+          <li class="material-icons">restore</li>
+        </button>
+        <button type="button" id="btnDelete" (click)="deletefrombin(row._id,row.project,'Project_list')">
+          <li class="material-icons">delete</li>
+        </button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="loading">
+      <tr mat-footer-cell *matFooterCellDef colspan="6">
+        Loading data...
+      </tr>
+    </ng-container>
+    <ng-container matColumnDef="noData">
+      <tr mat-footer-cell *matFooterCellDef colspan="6">
+        No data...
+      </tr>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedProjects"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedProjects;"></tr>
+    <tr mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':dataSource!=null}"></tr>
+    <tr mat-footer-row *matFooterRowDef="['noData']"
+      [ngClass]="{'hide':!(dataSource!=null && dataSource.data.length==0)}"></tr>
+  </table>
+
+  <table *ngIf="user" mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+      <ng-container matColumnDef="checkbox">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+          <td mat-cell *matCellDef="let row" class="check">
+            <mat-checkbox class="chex2 chex"  (change)="onChange(row._id, 'edit_user', $event.checked)"></mat-checkbox>
+          </td>
+        </ng-container>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell class="cancel" *matHeaderCellDef mat-sort-header>
+        <p>No</p>
+      </th>
+      <td mat-cell class="cancel" *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+    <ng-container matColumnDef="firstname">
+      <th mat-header-cell class="space-10" *matHeaderCellDef mat-sort-header>
+        <p>Firstname</p>
+      </th>
+      <td mat-cell class="space-10 dott" *matCellDef="let row">{{row.firstname}}</td>
+    </ng-container>
+    <ng-container matColumnDef="lastname">
+      <th mat-header-cell class="space-10 cancel" *matHeaderCellDef mat-sort-header>
+        <p>Lastname</p>
+      </th>
+      <td mat-cell class="space-10 cancel"*matCellDef="let row">{{row.lastname}}</td>
+    </ng-container>
+    <ng-container matColumnDef="department">
+      <th mat-header-cell class="space-10 ldd" *matHeaderCellDef mat-sort-header>
+        <p>Department</p>
+      </th>
+      <td mat-cell class="space3 dot ldd" *matCellDef="let row">{{row.department}}</td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <th mat-header-cell  class="space-10 cancel" *matHeaderCellDef mat-sort-header>
+        <p>Email</p>
+      </th>
+      <td mat-cell  class="space-10 cancel"  *matCellDef="let row">{{row.email}}</td>
+    </ng-container>
+    <ng-container matColumnDef="_id">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let row"></td>
+    </ng-container>
+    <ng-container matColumnDef="tools">
+      <th mat-header-cell  class="space-10  bbox"  *matHeaderCellDef>
+        <p>Tools</p>
+      </th>
+      <td mat-cell id="#box2" class="bbox" *matCellDef="let row">
+        <button type="button" id="btnEdit" (click)="restorefrombin(row._id,row.email,'Edit_User')">
+          <li class="material-icons">restore</li>
+        </button>
+        <button type="button" id="btnDelete" (click)="deletefrombin(row._id,row.email,'Edit_User')">
+          <li class="material-icons">delete</li>
+        </button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="loading">
+      <tr mat-footer-cell *matFooterCellDef colspan="6">
+        Loading data...
+      </tr>
+    </ng-container>
+    <ng-container matColumnDef="noData">
+      <tr mat-footer-cell *matFooterCellDef colspan="6">
+        No data...
+      </tr>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedUsers"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedUsers;"></tr>
+    <tr mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':dataSource!=null}"></tr>
+    <tr mat-footer-row *matFooterRowDef="['noData']"
+      [ngClass]="{'hide':!(dataSource!=null && dataSource.data.length==0)}"></tr>
+  </table>
+
+  <table *ngIf="department" mat-table class="full-width-table" [dataSource]="dataSource" matSort aria-label="Elements">
+    <ng-container matColumnDef="checkbox">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+      <td mat-cell *matCellDef="let row" class="check">
+        <mat-checkbox class="chex2 chex" (change)="onChange(row._id, 'department', $event.checked)"></mat-checkbox>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="id">
+      <th mat-header-cell class="cancel" *matHeaderCellDef mat-sort-header>
+        <p>No</p>
+      </th>
+      <td mat-cell class="cancel"  *matCellDef="let row">{{row.id}}</td>
+    </ng-container>
+    <ng-container matColumnDef="department">
+      <th mat-header-cell class="space-10 " *matHeaderCellDef mat-sort-header>
+        <p>Department</p>
+      </th>
+      <td mat-cell class="space3" *matCellDef="let row">{{row.department}}</td>
+    </ng-container>
+    <ng-container matColumnDef="_id">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let row"></td>
+    </ng-container>
+    <ng-container matColumnDef="tools">
+      <th mat-header-cell class="space-10  bbox"  *matHeaderCellDef>
+        <p>Tools</p>
+      </th>
+      <td mat-cell class="#box2 bbox" *matCellDef="let row">
+        <button type="button" id="btnEdit" (click)="restorefrombin(row._id,row.department,'Department')">
+          <li class="material-icons">restore</li>
+        </button>
+        <button type="button" id="btnDelete" (click)="deletefrombin(row._id,row.department,'Department')">
+          <li class="material-icons">delete</li>
+        </button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="loading">
+      <tr mat-footer-cell *matFooterCellDef colspan="6">
+        Loading data...
+      </tr>
+    </ng-container>
+    <ng-container matColumnDef="noData">
+      <tr mat-footer-cell *matFooterCellDef colspan="6">
+        No data...
+      </tr>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedDepartments"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedDepartments;"></tr>
+    <tr mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':dataSource!=null}"></tr>
+    <tr mat-footer-row *matFooterRowDef="['noData']"
+      [ngClass]="{'hide':!(dataSource!=null && dataSource.data.length==0)}"></tr>
+  </table>
+  <div class="row">
+    <button type="button" id="btnDeleteAll" class="btn btn-danger" (click)="RestoreOrDeletefrombin_All('delete')">
+      Delete Selected / All
+    </button>
+    <button type="button" id="btnRestoreAll" class="btn btn-success" (click)="RestoreOrDeletefrombin_All('restore')">
+      Restore Selected / All
+    </button>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]" [showFirstLastButtons]="true"></mat-paginator>
+  </div>
+</div>

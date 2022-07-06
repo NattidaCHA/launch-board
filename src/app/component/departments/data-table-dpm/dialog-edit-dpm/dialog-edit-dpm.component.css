@@ -1,0 +1,141 @@
+
+.f{
+  display: flex;
+}
+#btnClose{
+  background-color: rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+  color: rgb(219, 24, 17);
+  height: 30px;  
+}
+.box{
+  margin-left:250px;
+max-width: 700px;
+padding: 25px 30px 30px;
+margin: 0 auto;
+border-radius: 15px; 
+border: 2px solid rgb(235, 232, 232);
+}
+
+li{
+  font-size: 30px;
+}
+
+.email_text {
+  color: gray;
+  font-size: 16px;
+}
+
+.input_box,
+.select_department {
+  width: 100%;
+  display: block;
+  height: calc(2.00rem + 2px);
+  padding: .175rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.text_title {
+  text-align: left;
+  font-size: 22px;
+}
+p{
+  display: inline;
+  font-size: 20px;
+  
+}
+H1{
+  margin-bottom: 30PX;
+}
+
+@media (min-width:316px) {
+  .group1,.group2 {
+    width: 100%;
+  }
+  .text_input_f_l,.text_input_e,.text_input_d {
+    width: 100%;
+  }
+}
+
+  .select_department,.input_box {
+    width: 100%;
+  }
+
+  .group1 {
+    width: 50%;
+  }
+
+  .group_all {
+    width: 100%;
+  }
+
+@media (min-width:768px) {
+  .from_group {
+    width: 50%;
+  }
+
+  .text_input_f_l,.text_input_e,.text_input_d {
+    width: 100%;
+  }
+
+  .email_text {
+    font-size: 18px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 40%;
+  }
+
+  .select_department,.input_box {
+    width: 90%;
+  }
+
+  .group1{
+    width: 100%;
+    margin: auto;
+  }
+
+  .group_all {
+    width: 100%;
+    /* display: flex ; */
+    margin-left: 5%;
+  }
+  .group2 {
+    width: 100%;
+    
+  }
+  .btn_sumit{
+    /* width: 80%; */
+    margin-top: 35px;
+    text-align: center;
+  }
+  .btn{
+    width: 20%;
+  }
+}
+@media screen and (max-width: 1100px){
+  .box{
+    margin-left:10px;
+   
+    padding: 0px 0px 0px;
+    margin: 0px 0px;
+    border-radius: 0px; 
+    border: 0px;
+    margin-top: 0px;
+  }
+
+  .btn_sumit{
+    /* width: 80%; */
+    
+    text-align: center;
+  
+
+  }
+}

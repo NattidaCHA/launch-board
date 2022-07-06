@@ -1,0 +1,8 @@
+version: "3.5"
+services:
+    LBA_fontend:
+        build: .
+        image: nginx-angular
+        ports: 
+            - "80:80"
+        restart: always

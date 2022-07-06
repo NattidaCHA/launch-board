@@ -1,0 +1,48 @@
+<div class="f" style="width:100%;display:flex">
+  <div>
+    <h4 class="text_title" style="width: 100px;display:flex"><b>Project : </b></h4>
+  </div>
+  <div style="width:500px;max-width: 501px;word-wrap: break-word">
+    <h4>
+      <p>{{project_name}}</p>
+    </h4>
+  </div>
+  <div><button (click)="close()" style="float:right" type="button" id="btnClose">
+    <li class="material-icons">close</li>
+  </button></div>
+</div>
+<div class="container">
+  <form class="box" style="margin-top:5px">
+
+    <div class="form-group">
+      <label for="alterEgo" class="Bestt">Product Owner :</label>
+      <input type="text" class="form-control" id="p_owner" placeholder="Project Owner" value="{{product_owner}}"
+        [(ngModel)]="product_owner" name="product_owner" readonly>
+    </div>
+
+    <div class="w100">
+      <label for="alterEgo" class="Bestt">Launch Date :</label>
+      <input type="date" class="form-control" id="l_date" [(ngModel)]="launchdate" name="launchdate" readonly>
+    </div>
+    <div class="w100">
+      <label for="alterEgo" class="Bestt">Launch Time :</label>
+      <input type="time" class="form-control" id="l_time" style="display:inline" [(ngModel)]="launch_time"
+        name="launch_time" readonly>
+    </div>
+
+    <div class="form-group">
+      <label for="power" class="Bestt" id="t_detail">Detail :</label>
+      <textarea class="form-control" rows="3" id="c_detail" placeholder="detail..." value="{{detail}}"
+        [(ngModel)]="detail" name="detail" readonly></textarea>
+    </div>
+
+    <label style="display:flex">Status :
+      <p style="font-size: smaller;padding-top: 2px;margin-left: 10px">Project Doing</p>
+    </label>
+
+    <div class="w100_cen">
+      <button type="submit" class="btn btn-success" (click)="close()">Close</button>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,26 @@
+
+<div *ngIf='user' class="wrapper navbar-dark bg-dark" style="margin-top:20px">
+  <nav id="sidebar">
+    <div id="btnSidebar">
+       
+      <ul class="list-unstyled components ">
+        <li>
+          <button id="projects" class="btn btn-social-icon btn-google mx-1 text-white" (click)="navigate('projects')"><p>Projects</p></button>
+        </li>
+        <li>
+          <button id="users" class="btn btn-social-icon btn-google mx-1 text-white" (click)="navigate('users')"><p>Users</p></button>
+        </li>
+        <li>
+          <button id="departments" class="btn btn-social-icon btn-google mx-1 text-white" (click)="navigate('departments')"><p>Departments</p></button>
+        </li>
+        <li>
+          <button id="history" class="btn btn-social-icon btn-google mx-1 text-white" (click)="navigate('history')"><p>History</p></button>
+        </li>
+        <li>
+          <button id="bin" class="btn btn-social-icon btn-google mx-1 text-white" (click)="navigate('bin')"><p>Recycle Bin</p></button>
+        </li>
+      </ul>
+ 
+    </div>
+  </nav> 
+</div>

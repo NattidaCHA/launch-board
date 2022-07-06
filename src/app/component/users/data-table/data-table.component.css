@@ -1,0 +1,157 @@
+table {
+  width: 100%;
+}
+
+h1{
+    margin: 50px auto 20px 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 16%;
+    top: 6%;
+    color: #007018;
+  }
+
+  p{
+    margin: auto;
+    font-size:16px;
+    color: rgb(177, 177, 177);
+  }
+  
+ 
+  #btnEdit{
+    background-color: rgba(255, 255, 255, 0);
+    border: rgba(255, 255, 255, 0);
+    color: rgb(247, 222, 0)
+  }
+  
+  #btnDelete{
+    background-color: rgba(255, 255, 255, 0);
+    border: rgba(255, 255, 255, 0);
+    color: rgb(192, 0, 0)
+  }
+  
+  
+  
+  input[type=text] {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://www.freeiconspng.com/uploads/search-icon-png-2.png');
+    background-size: 5%;
+    background-position: 10px 8px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  th.mat-header-cell:first-of-type,td.mat-cell:first-of-type{
+  padding-left: 15px;
+  max-width: 43px;
+  }
+  #btnView{
+    background-color: rgba(255, 255, 255, 0);
+    border: rgba(255, 255, 255, 0);
+    color: rgb(11, 100, 216)
+  }
+@media screen and (min-width:1025px){
+
+  .full-width-table {
+    width: auto;
+    margin: auto;
+  }
+
+  .mat-elevation-z8{
+    width: 960px;
+    margin-top: 15%;
+    margin-left: 10%;
+  }
+
+  .search{
+    padding: 20px 30px 0px 0px;
+     width: 400px;
+    float: right;
+  }
+  .space{
+    padding: 5px;
+  }
+  .space2{
+    padding: 10px;
+    max-width:190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .space-10{
+    padding: 10px;
+  }
+
+  #box{
+    padding: 1px;
+    width: 130px;
+  }
+}
+@media  screen and (max-width: 1024px){
+  h1{
+    display: none;
+  }
+  .cancel{
+    display: none;
+  }
+
+  td.mat-cell:last-of-type{
+    padding-right: 2px;
+  }
+  .pad{
+    padding-left: 30px;
+  }
+
+  .pd{
+    padding-left: 30px;
+  }
+
+  .dp{
+    padding-left: 15px;
+  }
+
+  .dot{
+    max-width:10px;
+    width:10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media  screen and (max-width: 375px){
+
+  .pad{
+    padding-left: 25px;
+  }
+
+  .pad2{
+    padding-left: 10px;
+  }
+
+}
+
+@media  screen and (max-width: 320px){
+ 
+  .pad{
+    padding-left: 12px;
+  }
+
+  .pad2{
+    padding-left: 4px;
+  }
+
+  .dp{
+    padding-left: 0px;
+  }
+}
+
+
+

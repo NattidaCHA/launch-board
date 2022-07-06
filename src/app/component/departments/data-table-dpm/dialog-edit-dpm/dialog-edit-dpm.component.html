@@ -1,0 +1,22 @@
+
+<div><button (click)="close()" style="float:right" type="button" id="btnClose">
+    <li class="material-icons">close</li>
+  </button></div>
+
+<div class="f">
+  <h1 class="text_title"><b>Edit  Department : </b>
+    <!-- <p>{{departmentTitle}}</p> -->
+  </h1>
+</div>
+
+<form class="box" >
+  <div class="group_all">     
+    <div class="form-group">
+      <label for="name" class="text_input_f_l">Department :</label>
+      <input type="text" class="input_box" id="d_name" value="{{department}}"  name="department" [(ngModel)]="department" required placeholder="department" autocomplete="off">
+    </div>
+</div>
+<div class="btn_sumit">
+  <button type="submit" class="btn btn-success" (click)="save()">SAVE</button>
+</div>
+</form>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>LaunchBoardApi</title>
+  <base href="/">
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet"/>
+  <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet"/>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1976d2">
+
+  <rule name="HTTP to HTTPS" enabled="true" patternsyntax="Wildcard" stopprocessing="true">
+    <match url="*" negate="false"/>
+    <conditions logicalgrouping="MatchAny">
+      <add input="{HTTPS}" pattern="off"/>
+    </conditions>
+    <action type="Redirect" url="https://{HTTP_HOST}{REQUEST_URI}" appendquerystring="false" redirecttype="Permanent"/>
+  </rule>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1976d2">
+</head>
+<body>
+  <div>
+      <app-root></app-root>
+  </div>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+</body>
+
+</html>

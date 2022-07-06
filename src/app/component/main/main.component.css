@@ -1,0 +1,428 @@
+/* ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ WEB  ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥*/
+/* ♥ ♥ ♥ ♥ NAV-TOP ♥ ♥ ♥ ♥*/
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.w2 {
+  padding: 0px 10px 10px 10px;
+  border-top-left-radius: 50px;
+  margin-bottom: -12px;
+  border-bottom: 12px dotted white;
+}
+
+.material-icons {
+  margin: 0px 0px 0px 20px;
+}
+
+.eA {
+  height: 100px;
+  border-top-left-radius: 50px;
+  width: 700px;
+  margin: auto;
+  margin-bottom: 130px;
+}
+
+.w1 {
+  box-shadow: 0px 20px 15px 0px rgba(0, 0, 0, 0.16);
+  border-bottom-right-radius: 50px;
+}
+
+.w50 {
+  width: 100%;
+  height: 50%;
+}
+
+#name_p {
+  margin-top: 20px;
+  text-align: left;
+  width: 310px;
+  margin-left: 20px;
+  float: left;
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0px;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  margin-left: 100px;
+  display: flex;
+}
+
+.form-group2,
+.form-group3 {
+  display: flex;
+  margin: 0px 10px;
+}
+
+#btnRefresh {
+  color: rgb(219, 24, 17);
+  height: 30px;
+  float: right;
+}
+
+#btnRefresh:hover {
+  color: rgb(167, 6, 0);
+}
+
+.titleFilter {
+  padding-top: 7px
+}
+
+/* ♥ ♥ ♥ ♥ LIST ♥ ♥ ♥ ♥*/
+.list {
+  margin-top: 40px;
+}
+
+#btnlist {
+  height: 200px;
+  width: 700px;
+  border: 0px;
+  background-color: rgb(0, 0, 0, 0);
+  padding: 0px;
+}
+
+.number {
+  font-size: 40px;
+}
+
+.date_l {
+  width: 50%;
+  padding-top: 15px;
+  display: flex;
+}
+
+.date_l {
+  width: 50%;
+  padding-top: 15px;
+}
+
+.topdate {
+  display: flex;
+}
+
+.date_l2 {
+  width: 50%;
+  padding-top: 15px;
+}
+
+.icon {
+  font-family: Material Icons;
+  margin-left: 70px;
+  font-size: 20px;
+  text-align: left;
+}
+
+#l_date {
+  padding: 3px 4px;
+  margin-bottom: 0px;
+  height: inherit;
+}
+
+#p_o {
+  text-align: left;
+  margin-left: 25px;
+  padding-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list_b {
+  display: flex;
+  text-align: left;
+}
+
+#dp_list {
+  float: left;
+  margin-left: 25px;
+}
+
+.textnum {
+  font-size: 12px;
+}
+
+.mat-list-item {
+  font-size: 16px;
+}
+
+.countdown {
+  right: 16px;
+  text-align: center;
+  padding: 0px 10px;
+  float: right;
+  margin-right: 20px;
+  color: #fff;
+}
+
+#p_owner,
+#dp {
+  width: 200px;
+  display: block;
+  height: calc(2.25rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  margin-left: 10px;
+}
+
+.search-results {
+  height: inherit;
+  overflow: scroll;
+}
+
+.hide {
+  display: none;
+}
+
+#btns,
+.btn_re {
+  width: 700px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.mat-list {
+  width: 1700px;
+  margin-bottom: 10px;
+  padding: unset;
+  border-radius: 10px;
+  margin: auto;
+}
+
+@media (min-width: 760px) {
+  .form-group {
+    margin: auto;
+    display: flex;
+    margin-bottom: 10px
+  }
+
+  .mat-list {
+    width: 700px;
+    margin-bottom: 10px;
+    padding: unset;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
+
+.im{
+  width: 35px;
+  height: 35px;
+  margin-top: -8px;
+  border: none;
+  background-color: rgb(0, 0, 0, 0);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ MOBILE ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥*/
+
+@media screen and (max-width: 1120px) {
+    /* ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ NAV-TOP MOBILE ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥*/
+
+  h1 {
+    font-size: 70px;
+    margin-bottom: 15px;
+  }
+
+  .form-group {
+    margin-left: 100px;
+    margin-bottom: 20px;
+    font-size: 33px;
+    display: block;
+    width: auto;
+  }
+
+  #btnRefresh {
+    margin-right: 20px;
+  }
+
+  #dp,
+  #p_owner {
+    margin-top: 10px;
+    width: 510px;
+    height: calc(4rem + 2px);
+    font-size: 1.75rem;
+  }
+
+  #dp {
+    width: 555px;
+  }
+  #btnRefresh {
+    height: 60px;
+    margin-right: 0px;
+    width: 90px;
+    margin-left: 30px;
+    /* width: 50pc */
+  }
+
+
+  .mat-list-item {
+    font-size: 16px;
+  }
+
+  .np_b {
+    font-size: 50px
+  }
+
+  #p_owner,
+  .search-results {
+    height: inherit;
+    overflow: scroll;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .material-icons {
+    font-size: 60px;
+  }
+
+  .s_department {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .mat-list {
+    width: 95%;
+    padding: unset;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 20px
+  }
+
+  .mat-option {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 2rem;
+    padding: 1.375rem 0rem;
+    font-weight: 500px;
+    margin-top: 10px;
+    width: 17rem;
+  }
+
+  #btns {
+    text-align: center;
+    margin-left: 0px;
+    margin-bottom: 30px;
+  }
+
+  #yellow,
+  #green {
+    margin-right: 25px;
+  }
+
+  #btns,
+  .btn_re {
+    width: 100%;
+  }
+
+  /* ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ LIST MOBILE ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥*/
+  .eA {
+    width: 900px;
+    height: 150px;
+    margin-bottom: 180px;
+  }
+
+  .w50 {
+    width: 900px;
+    height: 50%;
+  }
+
+  .number {
+    font-size: 65px;
+    line-height: normal;
+  }
+
+  .textnum {
+    font-size: 20px;
+  }
+
+  .w2 {
+    margin-bottom: -20px;
+    border-bottom: 20px dotted white;
+  }
+
+  #btnlist {
+    height: 300px;
+    width: 900px;
+  }
+
+  #p_o,
+  #dp_list,
+  #l_date,
+  .icon {
+    font-size: 30px;
+    padding-top: 16px;
+    margin-left: 40px;
+  }
+
+  #dp_list {
+    padding-top: 0px;
+    margin-top: -5px;
+  }
+
+  #nn {
+    display: none;
+  }
+
+  .date_l2 {
+    width: 58%;
+  }
+
+  .date_l {
+    width: 42%
+  }
+
+  #l_date {
+    margin-left: 10px;
+  }
+
+  #name_p {
+    font-size: 45px;
+    width: 400px;
+  }
+
+  .im{
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -40px;
+  }
+ 
+  #button_pin{
+    margin-top: -30px;
+    margin-left: -40px;
+  }
+  .form-group{
+    margin-left: 6%
+  }
+  /* .re{
+    height: 150px;
+    width: 10%;
+  }
+  .in{
+    width: 80%
+  }
+  .form-group{
+    display: flex
+  } */
+}

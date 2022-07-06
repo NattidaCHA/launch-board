@@ -1,0 +1,104 @@
+<body style="position: fixed; left: 0;right: 0;top: 0;">
+
+  <div class="search-results" infiniteScroll [infiniteScrollDistance]="0.2" [infiniteScrollThrottle]="50"
+    [scrollWindow]="false" (scrolled)="onScroll()">
+
+    <div class="col-md-12">
+      <h1 class="color-test">Launch Board</h1>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <div class="form-group2">
+          <label class="titleFilter">Department :</label>
+          <input id="dp" placeholder="Department" [matAutocomplete]="autoDP" [formControl]="departmentCtrl"
+            [(ngModel)]="Department" (ngModelChange)="modelChangedDep($event,'department')" name="Department">
+          <mat-autocomplete #autoDP="matAutocomplete">
+            <mat-option *ngFor="let dp of filtereddepartment | async" [value]="dp.name">
+              <span>{{ dp.name }}</span>
+            </mat-option>
+          </mat-autocomplete>
+        </div>
+
+        <div class="form-group3">
+          <label for="alterEgo" class="titleFilter">Product Owner :</label>
+          <input id="p_owner" placeholder="Project Owner" aria-label="State" [matAutocomplete]="autoPO"
+            [formControl]="stateCtrl" [(ngModel)]="product_owner" (ngModelChange)="modelChangedEmail($event,'email')"
+            name="product_owner">
+          <mat-autocomplete #autoPO="matAutocomplete">
+            <mat-option *ngFor="let po of filteredStates | async" [value]="po.name">
+              <span>{{ po.name }}</span>
+            </mat-option>
+          </mat-autocomplete>
+          <a class="btn" (click)="setFilter()" id="btnRefresh">reset</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="btns">
+      <button id="green" class="btn" style="margin-left: 10px; border: solid 1.2px #4CAF50;"
+        (click)="btnColor('green')">Green</button>
+      <button id="yellow" class="btn" style="margin-left: 10px; border: solid 1.2px rgb(255, 230, 0);"
+        (click)="btnColor('yellow')">Yellow</button>
+      <button id="red" class="btn" style="margin-left: 10px;border: solid 1.2px crimson;"
+        (click)="btnColor('red')">Red</button>
+    </div>
+    <section *ngIf='!loading' class="tp-section">
+      <mat-progress-spinner class="tp-margin" [color]="spincolor" [mode]="mode" [value]="value" style="margin:0 auto;">
+      </mat-progress-spinner>
+    </section>
+
+    <div class="eA" *ngFor="let item of projects" id="{{item.id}}">
+      <button style="z-index:5px;position: relative;" id="btnlist" (click)="openList(item._id,item.project,item.product_owner.name,item.product_owner.department,
+    item.launch_date,item.detail)">
+        <div class="w50 w2">
+          <b id="name_p">{{item.project}}</b>
+          <table class="countdown">
+            <tr class="number">
+              <td id="day" style="padding-right: 20px;"><b>{{item.day}}</b></td>
+              <td id="hour">{{item.hour}}</td>
+              <td>:</td>
+              <td id="minutes">{{item.minutes}}</td>
+              <td>:</td>
+              <td id="second">{{item.second}}</td>
+            </tr>
+            <tr class="textnum">
+              <td style="padding-right: 20px">Days</td>
+              <td>Hours</td>
+              <td></td>
+              <td>Minutes</td>
+              <td></td>
+              <td>Seconds</td>
+            </tr>
+          </table>
+
+        </div>
+        <div class="w50 w1">
+          <div class="topdate">
+            <div class="date_l2">
+              <p id="p_o"><b>PO :</b> {{item.product_owner.name}}</p>
+            </div>
+            <div class="date_l">
+              <div id="ala" class="icon">alarm</div>
+              <p id="l_date"> <b id="nn">Launch Date :</b> {{item.launch_date}}</p>
+            </div><br>
+          </div>
+          <div class="date_l3">
+            <p id="dp_list"><b>Department :</b> {{item.product_owner.department}}</p>
+          </div>
+
+        </div>
+      </button>
+      <div id="button_pin">
+        <button id="{{item._id}}" class="im" style="z-index:500px;position: relative;float: right;margin-right: 30px;
+        margin-top: -50px; background-image: url('assets/images/pin-png-16.png')"
+          (click)="stickyClick(item._id,item.product_owner.email)">
+        </button>
+      </div>
+    </div>
+    <div id="noData" style="text-align: center;display: none">
+      <p style="color: tomato;font: 3em sans-serif;">No Projects.</p>
+    </div>
+
+  </div>
+</body>

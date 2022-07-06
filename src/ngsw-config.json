@@ -1,0 +1,42 @@
+{
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app-shell",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/*.css",
+          "/*.js",
+          "/manifest.json",
+          "/assets/icons/pin_PNG50.png"
+        ]
+      }
+    }, {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
+      }
+    }
+  ],
+  "DataGroups":[
+    {
+      "name": "lb-api-data",
+      "urls": "http://192.168.99.100:8080/api/projects",
+      "cacheConfig": {
+      "maxSize": "100",
+      "maxAge": "1d",
+      "timeout":"10s",
+      "strategy": "freshness"
+      }
+    }
+  ]
+}

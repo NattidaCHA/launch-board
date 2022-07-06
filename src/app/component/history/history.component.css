@@ -1,0 +1,254 @@
+h1 {
+  margin: 50px auto 20px 0px;
+  font-weight: bold;
+  position: absolute;
+  left: 16%;
+  top: 6%;
+  color: #007018;
+}
+
+
+
+p {
+  margin: auto;
+  font-size: 16px;
+  color: rgb(177, 177, 177);
+}
+
+#delayed {
+  border: solid 1.2px;
+  border-color: crimson
+}
+
+#done {
+  border: solid 1.2px;
+  border-color: #4CAF50
+}
+
+.mat-column-department {
+  max-width: 170px;
+}
+
+#btnView {
+  background-color: rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+  color: rgb(11, 100, 216)
+}
+
+#search {
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://www.freeiconspng.com/uploads/search-icon-png-2.png');
+  background-size: 8%;
+  background-position: 10px 8px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+#date {
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png');
+  background-size: 15%;
+  background-position: 5px 2px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+table {
+  margin-top: 2%
+}
+
+#btnstatus {
+  background-color: rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+  height: 30px;
+}
+
+#btn_date {
+  box-sizing: border-box;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  margin-left: -4px;
+
+}
+
+@media screen and (min-width: 1025px) {
+
+  .full-width-table {
+    width: auto;
+    margin: auto;
+  }
+
+  .mat-elevation-z8 {
+    width: 960px;
+    margin-top: 15%;
+    margin-left: 10%;
+  }
+
+  .searchh {
+    padding: 20px 30px 0px 0px;
+    width: 275px;
+    float: right;
+  }
+
+  .search2 {
+    padding: 20px 30px 0px 0px;
+    width: 275px;
+    float: right;
+    display: flex
+  }
+
+  .btn-primary {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+  }
+
+  .space {
+    padding: 5px;
+  }
+
+  .space2 {
+    padding: 10px;
+    width: 190px;
+    max-width: 190px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+
+  .space3 {
+    padding: 5px;
+    width: 150px;
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .space4 {
+    padding-right: 15px;
+    width: 130px;
+  }
+
+  .ld {
+    padding: 1px;
+    width: 112px;
+  }
+
+  .space-10 {
+    padding: 10px;
+  }
+
+  .space-1014 {
+    padding: 10px;
+    width: 140px;
+  }
+
+
+  .create {
+    padding: 20px 0px 0px 10px;
+    width: 290px;
+    float: left;
+  }
+
+  .pj {
+    padding: 10px;
+    width: 140px
+  }
+
+  #box {
+    padding: 1px;
+    width: 130px;
+  }
+
+
+  #box2 {
+    padding: 10px;
+    width: 120px;
+  }
+}
+
+
+@media screen and (max-width:1024px) {
+  h1 {
+    display: none;
+  }
+
+  .cancel {
+    display: none;
+  }
+
+  #search {
+
+    background-size: 5%;
+
+  }
+
+  #date {
+
+    background-size: 10%;
+
+  }
+  .ld2{
+    padding-left: 3%
+  }
+
+
+  td.mat-cell:last-of-type {
+    padding-right: 24px;
+  }
+
+  .dot {
+    width: 10px;
+    max-width: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .search2 {
+    padding: 7px 1px 0px 0px;
+    display: flex;
+  }
+
+  .create {
+    padding: 0px 0px 7px 0px;
+  }
+
+  .space2 {
+    width: 10px;
+    max-width: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .pad {
+    padding-left: 10px;
+  }
+  .pn{
+    width: 25%;
+  }
+}
+
+@media screen and (max-width:375px) {
+
+  td.mat-cell:last-of-type {
+    padding-right: 2px;
+  }
+
+}

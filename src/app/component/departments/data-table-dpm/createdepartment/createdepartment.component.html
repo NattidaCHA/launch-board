@@ -1,0 +1,27 @@
+
+<div><button (click)="close()" style="float:right" type="button" id="btnClose">
+  <li class="material-icons">close</li>
+</button></div>
+
+
+<div class="container" >
+<div class="f">
+<h1 class="text_title">Create Department</h1>
+</div>
+
+<form class="box"  >
+<div class="group_all">
+  <div class="form-group">
+    <label for="name" class="text_input_f_l">Department :</label>
+    <input type="text" class="input_box" id="d_name"  name="department" [(ngModel)]="department" required placeholder="department" autocomplete="off">
+  </div>
+  <div class="col-md-11" *ngIf="showError">
+    <p style="color: red; font-size: 16px;">{{showError}}</p>
+  </div>
+</div>
+<div class="btn_sumit">
+  <button type="submit" class="btn btn-success" (click)="onSubmit() ">submit</button>
+</div>
+
+</form>
+</div>

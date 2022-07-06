@@ -1,0 +1,82 @@
+
+<div *ngIf='user'>
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #drawer class="sidenav"  fixedInViewport="true" 
+          [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+          [mode]="(isHandset$ | async) ? 'over' : 'side'"
+          [opened]="!(isHandset$ | async)">
+          <mat-toolbar class="nav2">
+            <div *ngIf='user'>
+                <img class="png"  src="{{user.photoUrl}}">
+                <p class="text-white f jpg" style=" font-size: 18px;">{{user.name}}</p>
+                <!-- <button class="btn btn-outline-danger my-2 my-sm-0" (click)="signOut()" style="    width: 65px;
+                height: 30px; font-size: 13px;">Log out</button> -->
+            </div>
+          </mat-toolbar>
+    <br><br>
+        <mat-nav-list style="padding-top:15px;">
+           
+          <a mat-list-item routerLink="/projects" class="btn btn-dark">
+            <li class="material-icons" style="color:white; padding: 10px 7px 18px 0px;">assignment</li>
+            <p style="color:white;padding-top:10px; ">Projects</p></a>
+          <a mat-list-item routerLink="/users"  class="btn btn-dark ">
+            <li class="material-icons" style="color:white; padding: 10px 7px 18px 0px;">person</li>
+            <p style="color:white;padding-top:10px;">Users</p></a>
+          <a mat-list-item routerLink="/departments"  class="btn btn-dark ">
+            <li class="material-icons" style="color:white; padding: 10px 7px 18px 0px;">store</li>
+            <p style="color:white;padding-top:10px;">Departments</p></a>
+          <a mat-list-item routerLink="/history" class="btn btn-dark ">
+            <li class="material-icons" style="color:white; padding: 10px 7px 18px 0px;">access_time</li>
+            <p style="color:white;padding-top:10px;">History</p></a>
+          <a mat-list-item routerLink="/bin"  class="btn btn-dark ">
+            <li class="material-icons" style="color:white; padding: 10px 7px 18px 0px;">history</li>
+            <p style="color:white;padding-top:10px;">Recycle Bin</p></a>
+          <a mat-list-item (click)="signOut()" class="btn btn-dark ">
+            <li class="material-icons" style="color:white; padding: 10px 7px 18px 0px;">exit_to_app</li>
+            <p style="color:white;padding-top:10px;">Exit</p></a>
+            <!-- <br><br><br><br><br><br><br><br><br> -->
+          <!-- <button class="btn btn-outline-danger my-2 my-sm-0" id="bbt" (click)="signOut()" style=" width: 90px;">Log out</button> -->
+
+        <!-- <div *ngIf='user'>
+          <img class="png"  src="{{user.photoUrl}}">
+          <p class="text-white" style="margin: auto 10px; ">{{user.email}}</p>
+          <button class="btn btn-outline-danger my-2 my-sm-0" (click)="signOut()" style="width: 90px">Log out</button>
+        </div> -->
+      
+        </mat-nav-list>
+      </mat-sidenav>
+    
+      <mat-sidenav-content >
+        <mat-toolbar class="nav2" >
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button 
+            (click)="drawer.toggle()"
+            *ngIf="isHandset$ | async">  
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <div *ngIf='user'>
+            <nav class="navbar ">
+            <a href="http://localhost:4200/"><img class=" alignnone size-full wp-image-1923" src="assets/images/logo.png" alt="logo_light1"></a>
+          <div class="row png2" >
+            <img class="png" src="{{user.photoUrl}}">
+            <p class="text-white f"  style="margin:auto 10px;" >{{user.email}}</p>
+            <button class="btn btn-outline-danger my-2 my-sm-0" (click)="signOut()" >Log out</button>
+          </div>
+        </nav>
+        </div>
+        </mat-toolbar>
+        <!-- <mat-toolbar class="nav3">
+          <app-data-table-projects></app-data-table-projects>
+        </mat-toolbar> -->
+        <ng-content></ng-content>
+        <!-- <router-outlet></router-outlet> -->
+        <!-- <app-data-table-dpm></app-data-table-dpm> -->
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+    </div>
+    
+    <!-- *ngIf="isHandset$ | async" -->
+    <!-- <app-data-table-dpm></app-data-table-dpm> -->

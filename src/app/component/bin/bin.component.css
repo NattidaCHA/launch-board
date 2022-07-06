@@ -1,0 +1,299 @@
+
+  h1{
+    margin: 50px auto 20px 0px;
+    font-weight: bold;
+    position: absolute;
+    left: 16%;
+    top: 6%;
+    color: #007018;
+  }
+  
+p{
+  margin: auto;
+  font-size:16px;
+  color: rgb(177, 177, 177);
+}
+
+#btnEdit{
+  background-color: rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+  color: rgb(247, 222, 0)
+}
+
+#btnDelete{
+  background-color: rgba(255, 255, 255, 0);
+  border: rgba(255, 255, 255, 0);
+  color: rgb(192, 0, 0)
+}
+
+#btnDeleteAll{
+  color:white;
+  margin: auto 3% auto 4%;
+
+}
+
+#btnRestoreAll{
+  color:white;
+  margin: auto 3% auto 0px;
+
+}
+
+.mat-column-department{
+  max-width: 170px;
+}
+
+input[type=text] {
+  
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://www.freeiconspng.com/uploads/search-icon-png-2.png');
+  background-size: 5%;
+  background-position: 10px 8px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+.btn {
+  transition-duration: 0.3s;
+  margin:50px 0px 0px 5px; 
+}
+
+@media screen and (min-width:1025px){
+
+  .full-width-table {
+    width: auto;
+    margin: auto;
+  }
+
+  .mat-elevation-z8{
+    width: 960px;
+    margin-top: 15%;
+    margin-left: 10%;
+  }
+
+  .searchh{
+    padding: 20px 30px 0px 0px;
+     width: 400px; 
+     float: right;
+  }
+  #check{
+    padding:20px;
+  }
+
+ 
+  .space{
+    padding: 5px;
+  }
+  .space2{
+    padding: 5px;
+    overflow-wrap: break-word;
+    width: 190px;
+    max-width:191px;
+
+  }
+  .space3{
+    padding: 10px;
+    width: 190px;
+    max-width: 191px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .space4{
+    padding: 5px;
+    width: 190px;
+    max-width: 191px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ld{
+    padding: 1px;
+    width: 112px;
+  }
+  .space-10{
+    padding: 10px;
+  }
+
+  .space-1014{
+    padding: 10px;
+    width: 140px;
+  }
+
+
+  .create{
+    padding: 20px 0px 0px 10px;
+     width: 290px; 
+     float: left;
+  }
+
+
+  .ld2{
+    padding: 10px;
+    width: 130px;
+  }
+
+  td.mat-cell:last-of-type{
+    padding-right: 2px;
+  }
+
+  #box{
+    padding: 10px;
+    width: 80px;
+  }
+
+  #box2{
+    padding: 1px;
+  }
+}
+@media  screen and (max-width:1024px){
+  h1{
+    display: none;
+  }
+  .cancel{
+    display: none;
+  }
+ 
+
+  td.mat-cell:last-of-type{
+    padding-right: 24px;
+  }
+
+  td.mat-cell:first-of-type{
+    padding-left: 10px;
+  }
+
+  .dott{
+    width:80px;
+    max-width:80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .search2{
+  padding: 7px 1px 0px 0px;
+  display: flex;
+  }
+
+  .create{
+    padding: 0px 0px 7px 0px;
+  }
+
+  .space2{
+    width: 10px;
+    max-width: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .chex2{
+    padding-right: 22px;
+    padding-left: 10px;
+  }
+
+  #btnDeleteAll{
+    font-size:18px;
+  }
+  
+  #btnRestoreAll{
+    font-size:18px;
+  }
+  
+  .ldd{
+    padding-left: 20px;
+  }
+  .bbox{
+    padding-left: 35px;
+  }
+}
+
+@media  screen and (max-width:768px){
+ 
+
+  td.mat-cell:last-of-type{
+    padding-right: 24px;
+  }
+
+  td.mat-cell:first-of-type{
+    padding-left: 10px;
+  }
+ 
+
+}
+
+
+@media  screen and (max-width:376px){
+
+  td.mat-cell:last-of-type{
+    padding-right: 2px;
+  }
+
+  td.mat-cell:first-of-type{
+    padding-left: 4px;
+  }
+
+
+
+  .chex2{
+    padding-right: 15px;
+    padding-left: 10px;
+  }
+
+  #btnDeleteAll{
+    font-size:15px;
+    margin-left: 8% 
+  }
+  
+  #btnRestoreAll{
+    font-size:15px;
+  }
+  
+  .ldd{
+    padding-left: 10px;
+  }
+  .bbox{
+    padding-left: 15px;
+  }
+}
+
+@media  screen and (max-width:320px){
+
+
+  .chex{
+    padding-right: 11px;
+  }
+
+  #btnDeleteAll{
+    font-size:12px;
+   
+  }
+  
+  #btnRestoreAll{
+    font-size:12px;
+  }
+  .ldd{
+    padding-left: 0px;
+  }
+  .bbox{
+    padding-left: 0px;
+  }
+  #date {
+   
+    background-size: 10%;
+
+  }
+  #search{
+    background-size: 5%;
+  }
+}
+
+
+

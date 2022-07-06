@@ -1,0 +1,41 @@
+
+<div><button (click)="close()" style="float:right" type="button" id="btnClose">
+  <li class="material-icons">close</li>
+</button></div>
+
+<div class="f">
+<h4 class="text_p"><b>User : </b></h4>
+<h1 class="text_title"><b>{{email}}</b>
+</h1>
+</div>
+
+<form class="box">
+<div class="group_all">
+  <div class="group1" >
+
+    <div class="form-group">
+      <label for="name" class="text_input_f_l">First Name :</label>
+      <input type="text" maxlength="25" class="input_box" id="f_name" value="{{firstname}}" name="firstname" [(ngModel)]="firstname" required placeholder="firstname" readonly>
+    </div>
+
+    <div class="group2">
+      <div class="form-group">
+        <label for="name" class="text_input_f_l">Last Name :</label>
+        <input type="text" maxlength="25" class="input_box" id="l_name" value="{{lastname}}" name="lastname" [(ngModel)]="lastname" required placeholder="lastname" readonly>
+      </div>
+     
+    </div>
+
+    <div class="form-group">
+      <label for="power" class="text_input_d">Department :</label>
+      <input type="text" maxlength="25" class="input_box" value="{{department}}" name="department" [(ngModel)]="department" required  readonly>
+      
+      <div class="btn_sumit">
+        <button type="submit" style = "width: 70px ;" class="btn btn-success" (click)="close()">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
+</form>
